@@ -8,6 +8,31 @@ print(z)
 
 #using nested function for code simplification
 
-x = int(input("What's x? "))
+"""x = int(input("What's x? "))
 y = int(input("What's y? "))
 print(x+y)
+"""
+
+#dealing in float variable
+
+"""x = float(input("What's x? "))
+y = float(input("What's y? "))
+print(x+y)
+"""
+
+#using round() function for rounding decimal to like 1 or 3 or any places
+
+""" if we want integeral round then no need to mention places u want to round to"""
+
+"""x = float(input("What's x? "))
+y = float(input("What's y? "))
+z = round(x+y)
+print(z)
+"""
+
+#formatting output number with comma eg: 1256459 into 1,256,459
+
+x = float(input("What's x? "))
+y = float(input("What's y? "))
+z = round(x + y)
+print(f"{z:,}")
