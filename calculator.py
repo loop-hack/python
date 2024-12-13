@@ -32,7 +32,22 @@ print(z)
 
 #formatting output number with comma eg: 1256459 into 1,256,459
 
-x = float(input("What's x? "))
+"""x = float(input("What's x? "))
 y = float(input("What's y? "))
 z = round(x + y)
 print(f"{z:,}")
+"""
+
+#printing output upto 2 or lets say 3 places of decimal
+
+"""x = float(input("What's x? "))
+y = float(input("What's y? "))
+
+        #Method 1
+z = round(x / y, 2)
+print(z)
+
+        #Method 2
+z = x/y
+print(f"{z:.2f}")
+"""
