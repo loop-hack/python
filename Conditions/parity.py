@@ -24,3 +24,16 @@ def is_even(n) :
        return False
 
 main()
+
+#can be simplified as 
+
+def main() :
+    if is_even(x) :
+        print("Even")
+    else :
+        print("Odd")
+
+def is_even(n) :
+    return True if n%2 == 0 else False
+
+main()
