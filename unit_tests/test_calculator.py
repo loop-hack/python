@@ -54,6 +54,7 @@ upto first error it does'nt test remaining and not provide list of every asserti
 #crreating seperate test so that pytest check cases each indivisualy
 
 
+import pytest
 from calculator1 import square
 
 def test_positive():
@@ -67,3 +68,7 @@ def test_negative():
 
 def test_zero():
     assert square(0) == 0
+
+def test_str():
+    with pytest.raises(TypeError):  #USE to mainatain error when user provide str instead of int
+        square("cat")
