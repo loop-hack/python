@@ -17,7 +17,16 @@ file.close()
 
 #"a" for appending that will store ever input given
 
-name = input("What's your name? ")
+'''name = input("What's your name? ")
 file = open("name2.txt","a")
 file.write(name)
+file.close()
+'''
+
+"""output : AnkitDavidRam bcz 'a' 
+doesn't add new line after each input"""
+
+name = input("What's your name? ")
+file = open("name3.txt","a")
+file.write(f"{name}\n")
 file.close()
