@@ -1,4 +1,4 @@
-'''names = []
+names = []
 
 for _ in range(3):
     names.append(input("What's your name? "))
@@ -21,13 +21,13 @@ name = input("What's your name? ")
 file = open("name2.txt","a")
 file.write(name)
 file.close()
-'''
+
 
 
 """output : AnkitDavidRam bcz 'a' 
 doesn't add new line after each input"""
 
-"""name = input("What's your name? ")
+name = input("What's your name? ")
 file = open("name3.txt","a")
 file.write(f"{name}\n")
 file.close()
@@ -49,7 +49,7 @@ with open("name3.txt","r") as file:
 
 for line in lines:
     print("hello,",line.rstrip())
-"""
+
 
 # now we want to short our read names then print it
 
@@ -61,3 +61,17 @@ with open("name3.txt") as file:
 
 for name in sorted(names):
     print(f"hello, {name}")
+
+
+'''we can also short the given file then print as shown below
+but creating a variable is better if we want more than 1 changes '''
+
+with open("name3.txt") as file:
+    for line in sorted(file):
+        print("hello,", line.rstrip())
+
+# for shorting A to Z we want to short Z to A
+
+with open("name3.txt") as file:
+    for line in sorted(file,reverse=True):
+        print("hello,",line.rstrip())
