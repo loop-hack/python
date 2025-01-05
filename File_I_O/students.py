@@ -80,3 +80,36 @@ with open("students.csv") as file:
 
 for student in sorted(students,key=lambda student: student["name"]):
     print(f"{student['name']} is in {student['house']}")
+
+
+'''let's say we have more than one comma in line .. in our csv file we have data something like
+1)Ankit,Ambedkarnagar , Budhauli,Sheikhpura [3comma](2)Ron,The Burrow [1 comma] then how we gonna print name and adress'''
+
+import csv 
+
+students = []
+
+with open("students2.csv") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        name = row[0]
+        home = ", ".join(row[1:])
+        students.append({"name":name,"home":home})
+
+for student in sorted(students,key=lambda student: student["name"]):
+    print(f"{student['name']} is from {student['home']}")
+
+'''we have some changes in our .csv file in first row i wrote name,house to make it useful for 
+dictreader that is creating entire file into dictionary'''
+
+import csv 
+
+students = []
+
+with open("students2.csv") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        students.append({"name":row['name'],"home":row['home']})
+
+for student in sorted(students,key=lambda student: student["name"]):
+    print(f"{student['name']} is from {student['home']}")
