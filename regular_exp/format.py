@@ -34,6 +34,17 @@ name = input("What's your name? ").strip()
 matches = re.search("^(.+), *(.+)$",name)
 
 if matches:
-    name = matches.group(2) + matches.group(1)
+    name = matches.group(2) + " " + matches.group(1)
+
+print(f"hello, {name}")
+
+'''using walrus operator [:=] for both assigning and using same time'''
+
+import re
+
+name = input("What's your name? ").rstrip()
+
+if matches := re.search(r"^(.+), *(.+)$",name):
+    name = matches.group(2) + " " + matches.group(1)
 
 print(f"hello, {name}")
